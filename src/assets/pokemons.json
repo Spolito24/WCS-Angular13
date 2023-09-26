@@ -2,31 +2,37 @@
   {
     "name": "Pikachu",
     "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
-    "description": "Quand il s’énerve, il libère instantanément l’énergie emmagasinée dans les poches de ses joues."
+    "description": "Quand il s’énerve, il libère instantanément l’énergie emmagasinée dans les poches de ses joues.",
+    "isSelected": false
   },
   {
     "name": "Dracaufeu",
     "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
-    "description": "On raconte que plus un Dracaufeu a vécu de combats difficiles, plus sa flamme est brûlante."
+    "description": "On raconte que plus un Dracaufeu a vécu de combats difficiles, plus sa flamme est brûlante.",
+    "isSelected": false
   },
   {
     "name": "Tortank",
     "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png",
-    "description": "Il écrase ses adversaires de tout son poids pour leur faire perdre connaissance. Il rentre dans sa carapace s’il se sent en danger."
+    "description": "Il écrase ses adversaires de tout son poids pour leur faire perdre connaissance. Il rentre dans sa carapace s’il se sent en danger.",
+    "isSelected": false
   },
   {
     "name": "Roucoul",
     "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png",
-    "description": "De nature très docile, il préfère projeter du sable pour se défendre plutôt que contre-attaquer."
+    "description": "De nature très docile, il préfère projeter du sable pour se défendre plutôt que contre-attaquer.",
+    "isSelected": false
   },
   {
     "name": "Florizarre",
     "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
-    "description": "Sa plante donne une grosse fleur quand elle absorbe les rayons du soleil. Il est toujours à la recherche des endroits les plus ensoleillés."
+    "description": "Sa plante donne une grosse fleur quand elle absorbe les rayons du soleil. Il est toujours à la recherche des endroits les plus ensoleillés.",
+    "isSelected": false
   },
   {
     "name": "Psykokwak",
     "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png",
-    "description": "Ce Pokémon a tout le temps la migraine. Quand la douleur devient trop intense, il se met à utiliser des pouvoirs mystérieux."
+    "description": "Ce Pokémon a tout le temps la migraine. Quand la douleur devient trop intense, il se met à utiliser des pouvoirs mystérieux.",
+    "isSelected": false
   }
 ]
