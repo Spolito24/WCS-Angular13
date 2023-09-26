@@ -19,7 +19,6 @@ export class PokedexPageComponent implements OnInit {
   ngOnInit(): void {
     this.pokedexService.getPokedex().subscribe((pokemonsFromJsonFile) => {
       this.pokemons = pokemonsFromJsonFile;
-      console.log(this.pokemons);
     });
   }
 }

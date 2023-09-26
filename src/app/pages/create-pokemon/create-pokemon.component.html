@@ -1,6 +1,6 @@
 <h1 class="text-center text-success pt-2">Add a new Pokemon</h1>
 
-<form #pokemonForm="ngForm" (ngSubmit)="pokemonForm.valid && onSubmit()">
+<form #pokemonForm="ngForm" (ngSubmit)="pokemonForm.valid && onSubmit(newPokemon)" class="mx-3">
 
   <div class="mb-3">
     <label for="name" class="form-label">Name :</label>
