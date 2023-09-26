@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { PokedexPageComponent } from './pages/pokedex-page/pokedex-page.component';
 import { CreatePokemonComponent } from './pages/create-pokemon/create-pokemon.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { MenuComponent } from './pages/menu/menu.component';
     PokedexPageComponent,
     CreatePokemonComponent,
     MenuComponent,
+    PokemonDetailComponent,
+    PokemonListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

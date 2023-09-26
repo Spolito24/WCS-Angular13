@@ -1,1 +1,18 @@
-<p>pokemon-list works!</p>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+  <div *ngFor="let pokemon of pokemons">
+  <div class="col">
+      <div class="card shadow-sm">
+        <img src="{{pokemon.image}}" alt="picture of {{pokemon.name}}" class="border border-success border-2">
+        <div class="card-body">
+          <p class="card-text text-center text-success fs-3">{{pokemon.name}}</p>
+          <p *ngIf="pokemon.isSelected" class="card-text">{{pokemon.description}}</p>
+          <div class="d-flex justify-content-center">
+                <button *ngIf="!pokemon.isSelected" (click)="pokemon.isSelected = true" class="btn btn-outline-success">Show Details</button>
+                <button *ngIf="pokemon.isSelected" (click)="pokemon.isSelected = false" class="btn btn-outline-success">Hide Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
