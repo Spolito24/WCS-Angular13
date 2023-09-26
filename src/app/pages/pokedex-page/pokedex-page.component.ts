@@ -11,6 +11,10 @@ export class PokedexPageComponent implements OnInit {
   pokemons: Pokemon[] = [];
   constructor(public pokedexService: PokedexService) {}
 
+  pokemonDetail(event: Pokemon): void {
+    console.log(event);
+  }
+
   ngOnInit(): void {
     this.pokedexService.getPokedex().subscribe((pokemonsFromJsonFile) => {
       this.pokemons = pokemonsFromJsonFile;

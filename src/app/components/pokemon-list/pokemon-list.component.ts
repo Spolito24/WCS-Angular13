@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Pokemon } from 'src/app/shared/Pokemon';
 
 @Component({
@@ -9,5 +9,10 @@ import { Pokemon } from 'src/app/shared/Pokemon';
 export class PokemonListComponent {
   @Input() pokemons: Pokemon[] = [];
 
-  constructor() {}
+  @Output()
+  pokemonDetail: EventEmitter<Pokemon> = new EventEmitter();
+
+  sendPokemon(pokemon: Pokemon): void {
+    this.pokemonDetail.emit(pokemon);
+  }
 }
