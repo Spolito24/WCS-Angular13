@@ -1,1 +1,38 @@
-<p>create-pokemon works!</p>
+<h1 class="text-center text-success pt-2">Add a new Pokemon</h1>
+
+<form #pokemonForm="ngForm" (ngSubmit)="pokemonForm.valid && onSubmit()">
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Name :</label>
+    <input type="text" name="name" id="name" class="form-control" [(ngModel)]="newPokemon.name" #name="ngModel" required maxlength="30">
+
+    <div *ngIf="name.errors && pokemonForm.submitted">
+      <div *ngIf="name.errors?.['required']" class="form-text text-danger">Your pokemon should have a name</div>
+      <div *ngIf="name.errors?.['maxlength']" class="form-text text-danger">Your pokemon name can't have more than 30 character</div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="image" class="form-label">Image :</label>
+    <input type="url" name="image" id="image" class="form-control" [(ngModel)]="newPokemon.image" #image="ngModel" required>
+
+    <div *ngIf="image.errors && pokemonForm.submitted">
+      <div *ngIf="image.errors?.['required']" class="form-text text-danger">Your pokemon should have an image</div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description :</label>
+    <input type="text" name="description" id="description" class="form-control" [(ngModel)]="newPokemon.description" #description="ngModel" required minlength="20">
+
+    <div *ngIf="description.errors && pokemonForm.submitted">
+      <div *ngIf="description.errors?.['required']" class="form-text text-danger">Your pokemon should have a description</div>
+      <div *ngIf="description.errors?.['minlength']" class="form-text text-danger">Your pokemon description should be at least 20 character</div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <button *ngIf="pokemonForm.invalid" type="submit" class="btn btn-danger">Pokemon Invalid</button>
+    <button *ngIf="pokemonForm.valid" type="submit" class="btn btn-success">Add Pokemon</button>
+  </div>
+</form>
