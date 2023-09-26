@@ -9,10 +9,11 @@ import { PokedexService } from 'src/app/shared/pokedex.service';
 })
 export class PokedexPageComponent implements OnInit {
   pokemons: Pokemon[] = [];
+  pokemonToDetail: Pokemon = new Pokemon('', '', '');
   constructor(public pokedexService: PokedexService) {}
 
   pokemonDetail(event: Pokemon): void {
-    console.log(event);
+    this.pokemonToDetail = event;
   }
 
   ngOnInit(): void {

@@ -10,9 +10,9 @@ export class PokemonListComponent {
   @Input() pokemons: Pokemon[] = [];
 
   @Output()
-  pokemonDetail: EventEmitter<Pokemon> = new EventEmitter();
+  pokemonToDetail: EventEmitter<Pokemon> = new EventEmitter();
 
   sendPokemon(pokemon: Pokemon): void {
-    this.pokemonDetail.emit(pokemon);
+    this.pokemonToDetail.emit(pokemon);
   }
 }

@@ -1,7 +1,7 @@
 <h1 class="text-center text-success pt-2">Your Pokedex</h1>
 <div class="container">
-  <app-pokemon-list [pokemons]="pokemons" (pokemonDetail)="pokemonDetail($event)"></app-pokemon-list>
-  <app-pokemon-detail></app-pokemon-detail>
+  <app-pokemon-list [pokemons]="pokemons" (pokemonToDetail)="pokemonDetail($event)"></app-pokemon-list>
+  <app-pokemon-detail [pokemonToDetail]="pokemonToDetail"></app-pokemon-detail>
 
 
 </div>

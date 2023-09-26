@@ -6,10 +6,8 @@
         <img src="{{pokemon.image}}" alt="picture of {{pokemon.name}}" class="border border-success border-2">
         <div class="card-body">
           <p class="card-text text-center text-success fs-3">{{pokemon.name}}</p>
-          <p *ngIf="pokemon.isSelected" class="card-text">{{pokemon.description}}</p>
           <div class="d-flex justify-content-center">
-                <button *ngIf="!pokemon.isSelected" (click)="pokemon.isSelected = true; sendPokemon(pokemon)" class="btn btn-outline-success">Show Details</button>
-                <button *ngIf="pokemon.isSelected" (click)="pokemon.isSelected = false" class="btn btn-outline-success">Hide Details</button>
+                <button (click)="sendPokemon(pokemon)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-success">Show Details</button>
           </div>
         </div>
       </div>
