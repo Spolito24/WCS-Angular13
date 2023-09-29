@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pokemon } from 'src/app/shared/Pokemon';
+import { Pokemon } from 'src/app/shared/Pokemon.model';
 import { PokedexService } from 'src/app/shared/pokedex.service';
 
 @Component({
@@ -17,8 +17,6 @@ export class PokedexPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.pokedexService.getPokedex().subscribe((pokemonsFromJsonFile) => {
-      this.pokemons = pokemonsFromJsonFile;
-    });
+    this.pokemons = this.pokedexService.getPokemons();
   }
 }

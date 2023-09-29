@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Pokemon } from 'src/app/shared/Pokemon';
+import { Pokemon } from 'src/app/shared/Pokemon.model';
 
 @Component({
   selector: 'app-pokemon-detail',

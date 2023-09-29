@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Pokemon } from 'src/app/shared/Pokemon';
+import { Pokemon } from 'src/app/shared/Pokemon.model';
+import { PokedexService } from 'src/app/shared/pokedex.service';
 
 @Component({
   selector: 'app-create-pokemon',
@@ -9,9 +10,10 @@ import { Pokemon } from 'src/app/shared/Pokemon';
 export class CreatePokemonComponent {
   newPokemon: Pokemon = new Pokemon('', '', '');
 
-  constructor() {}
+  constructor(private pokedexService: PokedexService) {}
 
   onSubmit(): void {
-    console.log(this.newPokemon);
+    this.pokedexService.addPokemon(this.newPokemon);
+    alert('new pokemon added');
   }
 }
